@@ -148,13 +148,32 @@ This section should contain a brief description of the steps to follow to run th
 
 ### Dataset
 #### Dataset analysis
-This section should contain a quantitative and qualitative description of the dataset. It should include images, charts and other visualizations.
+Randomly displayed some images 
+![alt sample1](https://github.com/minfeng-lu/udacity-object-detection-in-urban-envrionment/blob/main/images/sample1.png)
+![alt sample1](https://github.com/minfeng-lu/udacity-object-detection-in-urban-envrionment/blob/main/images/sample2.png)
+![alt sample1](https://github.com/minfeng-lu/udacity-object-detection-in-urban-envrionment/blob/main/images/sample3.png)
+![alt sample1](https://github.com/minfeng-lu/udacity-object-detection-in-urban-envrionment/blob/main/images/sample4.png)
+![alt sample1](https://github.com/minfeng-lu/udacity-object-detection-in-urban-envrionment/blob/main/images/sample5.png)
+![alt sample1](https://github.com/minfeng-lu/udacity-object-detection-in-urban-envrionment/blob/main/images/sample6.png)
+
+Randomly selected a sample of 100 and calculated the label class distribution to see car/pedestrian/cyclisit labels. 
+Data Class Distribution:
+![alt class_distribution](https://github.com/minfeng-lu/udacity-object-detection-in-urban-envrionment/blob/main/images/class_distribution.png)
+
 #### Cross validation
 This section should detail the cross validation strategy and justify your approach.
 
 ### Training
+
 #### Reference experiment
 This section should detail the results of the reference experiment. It should includes training metrics and a detailed explanation of the algorithm's performances.
 
 #### Improve on the reference
-This section should highlight the different strategies you adopted to improve your model. It should contain relevant figures and details of your findings.
+Data Augmentation: augmentation strategies include random_rgb_to_gray, random_adjust_brightness and random_adjust_contrast. Sample Augmented images: 
+![alt augmentation1](https://github.com/minfeng-lu/udacity-object-detection-in-urban-envrionment/blob/main/images/augmentation1.png)
+![alt augmentation2](https://github.com/minfeng-lu/udacity-object-detection-in-urban-envrionment/blob/main/images/augmentation2.png)
+![alt augmentation3](https://github.com/minfeng-lu/udacity-object-detection-in-urban-envrionment/blob/main/images/augmentation3.png)
+![alt augmentation4](https://github.com/minfeng-lu/udacity-object-detection-in-urban-envrionment/blob/main/images/augmentation4.png)
+![alt augmentation5](https://github.com/minfeng-lu/udacity-object-detection-in-urban-envrionment/blob/main/images/augmentation5.png)
+
+
