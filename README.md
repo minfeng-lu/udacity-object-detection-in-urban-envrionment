@@ -141,39 +141,64 @@ python inference_video.py --labelmap_path label_map.pbtxt --model_path experimen
 ## Submission Template
 
 ### Project overview
-This section should contain a brief description of the project and what we are trying to achieve. Why is object detection such an important component of self driving car systems?
+This projecct uses convolutional neural network to detect and classify objects (cars, pedestrians and cyclists) from Waymo open dataset. This project uses TensorFlow Object Detection API to deploy models and get predections on images. Object detection allows the vehicle to identify objects around it so that it won't accidentaly hit pedestrians or violate traffic rules and also helps it to know what will be the safe next move. 
 
 ### Set up
-This section should contain a brief description of the steps to follow to run the code for this repository.
+I was not able to set up a local dev environment so I mainly used the classroom workspace to complete the assigned tasks. That should not require additional setup other than the ones mentioned in the project instruction.
 
 ### Dataset
 #### Dataset analysis
-Randomly displayed some images 
-![alt sample1](https://github.com/minfeng-lu/udacity-object-detection-in-urban-envrionment/blob/main/images/sample1.png)
-![alt sample1](https://github.com/minfeng-lu/udacity-object-detection-in-urban-envrionment/blob/main/images/sample2.png)
-![alt sample1](https://github.com/minfeng-lu/udacity-object-detection-in-urban-envrionment/blob/main/images/sample3.png)
-![alt sample1](https://github.com/minfeng-lu/udacity-object-detection-in-urban-envrionment/blob/main/images/sample4.png)
-![alt sample1](https://github.com/minfeng-lu/udacity-object-detection-in-urban-envrionment/blob/main/images/sample5.png)
-![alt sample1](https://github.com/minfeng-lu/udacity-object-detection-in-urban-envrionment/blob/main/images/sample6.png)
+Randomly displayed some images <br/>
+
+![alt sample1](https://github.com/minfeng-lu/udacity-object-detection-in-urban-envrionment/blob/main/images/sample1.png?raw=true)
+![alt sample1](https://github.com/minfeng-lu/udacity-object-detection-in-urban-envrionment/blob/main/images/sample2.png?raw=true)
+![alt sample1](https://github.com/minfeng-lu/udacity-object-detection-in-urban-envrionment/blob/main/images/sample3.png?raw=true)
+![alt sample1](https://github.com/minfeng-lu/udacity-object-detection-in-urban-envrionment/blob/main/images/sample4.png?raw=true)
+![alt sample1](https://github.com/minfeng-lu/udacity-object-detection-in-urban-envrionment/blob/main/images/sample5.png?raw=true)
+![alt sample1](https://github.com/minfeng-lu/udacity-object-detection-in-urban-envrionment/blob/main/images/sample6.png?raw=true)
 
 Randomly selected a sample of 100 and calculated the label class distribution to see car/pedestrian/cyclisit labels. 
 Data Class Distribution:
-![alt class_distribution](https://github.com/minfeng-lu/udacity-object-detection-in-urban-envrionment/blob/main/images/class_distribution.png)
+![alt class_distribution](https://github.com/minfeng-lu/udacity-object-detection-in-urban-envrionment/blob/main/images/class_distribution.png?raw=true)
+
+From the sample we can see the dataset covers wide variety of scenrios, with various visibility (fully lit environemt vs raining/foggy blurry view), scale (close up vs far away objects), object density (dense urban environment with lots of cars and pedestrians and open road with no object), lighting (daylight vs night time) etc, so the dataset is very representative and random sampling shouldn't produce a skewed/unrepresentative datasets.  
 
 #### Cross validation
-This section should detail the cross validation strategy and justify your approach.
+I used a roughly 9:1 train/eval ratio so I randomly split the training set into 87/10.  
 
 ### Training
+![alt ref_loss](https://github.com/minfeng-lu/udacity-object-detection-in-urban-envrionment/blob/main/images/ref_loss.png?raw=true)
+
+![alt ref_learning_rate](https://github.com/minfeng-lu/udacity-object-detection-in-urban-envrionment/blob/main/images/red_learning_rate.png?raw=true)
+
+![alt ref_eval_loss](https://github.com/minfeng-lu/udacity-object-detection-in-urban-envrionment/blob/main/images/ref_eval_loss.png?raw=true)
+
+![alt ref_learning_rate](https://github.com/minfeng-lu/udacity-object-detection-in-urban-envrionment/blob/main/images/ref_learning_rate.png?raw=true)
+
+![alt ref_precision](https://github.com/minfeng-lu/udacity-object-detection-in-urban-envrionment/blob/main/images/ref_eval_precision.png?raw=true)
+
+![alt ref_recall](https://github.com/minfeng-lu/udacity-object-detection-in-urban-envrionment/blob/main/images/ref_eval_recall.png?raw=true)
 
 #### Reference experiment
-This section should detail the results of the reference experiment. It should includes training metrics and a detailed explanation of the algorithm's performances.
+
 
 #### Improve on the reference
 Data Augmentation: augmentation strategies include random_rgb_to_gray, random_adjust_brightness and random_adjust_contrast. Sample Augmented images: 
-![alt augmentation1](https://github.com/minfeng-lu/udacity-object-detection-in-urban-envrionment/blob/main/images/augmentation1.png)
-![alt augmentation2](https://github.com/minfeng-lu/udacity-object-detection-in-urban-envrionment/blob/main/images/augmentation2.png)
-![alt augmentation3](https://github.com/minfeng-lu/udacity-object-detection-in-urban-envrionment/blob/main/images/augmentation3.png)
-![alt augmentation4](https://github.com/minfeng-lu/udacity-object-detection-in-urban-envrionment/blob/main/images/augmentation4.png)
-![alt augmentation5](https://github.com/minfeng-lu/udacity-object-detection-in-urban-envrionment/blob/main/images/augmentation5.png)
+![alt augmentation1](https://github.com/minfeng-lu/udacity-object-detection-in-urban-envrionment/blob/main/images/augmentation1.png?raw=true)
+![alt augmentation2](https://github.com/minfeng-lu/udacity-object-detection-in-urban-envrionment/blob/main/images/augmentation2.png?raw=true)
+![alt augmentation3](https://github.com/minfeng-lu/udacity-object-detection-in-urban-envrionment/blob/main/images/augmentation3.png?raw=true)
+![alt augmentation4](https://github.com/minfeng-lu/udacity-object-detection-in-urban-envrionment/blob/main/images/augmentation4.png?raw=true)
+![alt augmentation5](https://github.com/minfeng-lu/udacity-object-detection-in-urban-envrionment/blob/main/images/augmentation5.png?raw=true)
 
 
+![alt exp1_loss](https://github.com/minfeng-lu/udacity-object-detection-in-urban-envrionment/blob/main/images/exp1_loss.png?raw=true)
+
+![alt exp_learning_rate](https://github.com/minfeng-lu/udacity-object-detection-in-urban-envrionment/blob/main/images/exp1_learning_rate.png?raw=true)
+
+![alt exp1_eval_loss](https://github.com/minfeng-lu/udacity-object-detection-in-urban-envrionment/blob/main/images/exp1_eval_loss.png?raw=true)
+
+![alt exp1_learning_rate](https://github.com/minfeng-lu/udacity-object-detection-in-urban-envrionment/blob/main/images/exp1_learning_rate.png?raw=true)
+
+![alt epx1_precision](https://github.com/minfeng-lu/udacity-object-detection-in-urban-envrionment/blob/main/images/exp1_eval_precision.png?raw=true)
+
+![alt exp1_recall](https://github.com/minfeng-lu/udacity-object-detection-in-urban-envrionment/blob/main/images/exp1_eval_recall.png?raw=true)
