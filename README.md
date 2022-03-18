@@ -169,7 +169,7 @@ I used a roughly 9:1 train/eval ratio so I randomly split the training set into 
 ### Training
 ![alt ref_loss](https://github.com/minfeng-lu/udacity-object-detection-in-urban-envrionment/blob/main/images/ref_loss.png?raw=true)
 
-![alt ref_learning_rate](https://github.com/minfeng-lu/udacity-object-detection-in-urban-envrionment/blob/main/images/red_learning_rate.png?raw=true)
+![alt ref_learning_rate](https://github.com/minfeng-lu/udacity-object-detection-in-urban-envrionment/blob/main/images/ref_learning_rate.png?raw=true)
 
 ![alt ref_eval_loss](https://github.com/minfeng-lu/udacity-object-detection-in-urban-envrionment/blob/main/images/ref_eval_loss.png?raw=true)
 
