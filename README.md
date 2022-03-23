@@ -167,6 +167,12 @@ From the sample we can see the dataset covers wide variety of scenrios, with var
 I used a roughly 9:1 train/eval ratio so I randomly split the training set into 87/10.  
 
 ### Training
+</br>
+Observation: The training loss is decresing. At initial stage the loss is decreasing rapidly and later on the trend should reach a plateau. Unfortunately, the training process started to show OOM errors once it reached around 5k steps so the plot here is not able to actually reach to a stable stage, which should be a flat plateau. The overall trend indicates the model is converging. The training loss is also decreasing, which shows the model is generalizing well.
+
+</br>
+
+
 ![alt ref_loss](https://github.com/minfeng-lu/udacity-object-detection-in-urban-envrionment/blob/main/images/ref_loss.png?raw=true)
 
 ![alt ref_learning_rate](https://github.com/minfeng-lu/udacity-object-detection-in-urban-envrionment/blob/main/images/ref_learning_rate.png?raw=true)
